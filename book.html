@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" type = "text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>Book your space vacation</title>
+</head>
+<body>
+  <!-- Header section -->
+  <header>
+    <a href="index.html"><img class="navbar-logo" src="./assets/Logo.png" alt="Zsion Union Logo"></a>
+    <nav>
+      <ul class="navbar-menu" id="spaceLinks">
+        <li><a href="aboutus.html">About Zsoid</a></li>
+        <li><a href="ambassadors.html">Our Ambassadors</a></li>
+        <li><a href="highlights.html"> Highlights</a></li>
+        <li><a href="book.html">Book your visit</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Dates and location section -->
+  <section class="main-content">
+    <div class="booking-form">
+      <form>
+        <div id="locations">
+          <span class="form-label">Pick your space quest:</span>
+          <input class="form-control" type="text" placeholder="Enter an experience">
+        </div>
+        <div id="check-in">
+          <div class="form-group">
+            <span class="form-label">Check In</span>
+            <input class="form-control" type="date" required>
+          </div>
+        </div>
+        <div id="check-out">
+          <div class="form-group">
+            <span class="form-label">Check Out</span>
+            <input class="form-control" type="date" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <span class="form-label">Capsules</span>
+          <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <span class="form-label">Humans</span>
+          <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="form-btn">
+          <button class="submit-btn">Space Check</button>
+        </div>
+      </form>
+    </div>
+
+  <!-- Options section -->
+
+    <div class="vacation-container">
+      <div class="trip-options">
+        <h4>Experience 1</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quisquam consectetur rerum nihil culpa reiciendis.</p>
+        <img class="space-img" src="https://cdn.pixabay.com/photo/2020/09/16/19/00/ufos-5577222_960_720.jpg" alt="Visit HQ PlanetA">
+        <button class="book-btn">Book</button>
+      </div>
+      <div class="trip-options">
+        <h4>Experience 2</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quisquam consectetur rerum nihil culpa reiciendis.</p>
+        <img class="space-img" src="https://cdn.pixabay.com/photo/2020/09/16/19/00/ufos-5577222_960_720.jpg" alt="Visit HQ PlanetB">
+        <button class="book-btn">Book</button>
+      </div>
+      <div class="trip-options">
+        <h4>Experience 3</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quisquam consectetur rerum nihil culpa reiciendis.</p>
+        <img class="space-img" src="https://cdn.pixabay.com/photo/2020/09/16/19/00/ufos-5577222_960_720.jpg" alt="Visit HQ PlanetC">
+        <button class="book-btn">Book</button>
+      </div>
+    </div>
+
+  </section>
+
+  
+  <!-- Footer section -->
+  <footer>
+    <h3>Want to connect with us?</h3>
+    <button class="contact-btn">Find us here!</button>
+  </footer>
+  
+  <script src="script.js"></script>  
+</body>
+</html>
