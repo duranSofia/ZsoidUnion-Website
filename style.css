@@ -14,7 +14,7 @@ body{
 }
 
 header{
-  height: 160px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
@@ -105,6 +105,48 @@ header a{
   display: flex;
   flex-wrap: wrap;
 }
+/* Highlights page */
+
+.highlights{
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+.options-box{
+  margin: 0 5px 10px 5px;
+  width: 30%;
+  background-color: var(--purple);
+  opacity: 0.85;
+  padding: 0 0 10px;
+  border-radius: 5px;
+}
+
+/* /HELP HelP
+ p.options-box{
+  padding-right: 100px;
+} */ 
+
+.inner{
+  padding: 20px;
+  width: 100%;
+}
+
+.img-highlights{
+  display: block;
+  margin: 0 0 5px 0;
+  width: 100%;
+}
+
+.btn-cards{
+  display: block;
+  margin: 0 0 5px 0;
+  width: 100px;
+  background-color: var(--green);
+}
+
+/* FOOTER */
 
 footer{
   padding: 15px;
@@ -119,3 +161,38 @@ footer{
 }
 
 /* Add media queries */
+/* For mobile phones */
+@media only screen and (max-width:768px){
+  header{
+    display: flex;
+  }
+  .navbar-menu{
+    display: block;
+    align-items: flex-end;
+  }
+  .main-content{
+    display: block;
+    width: 100%;
+  }
+  .booking-form{
+    display: block;
+    background-color: var(--purple);
+    opacity: 0.85;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    height: auto;
+  }
+  .vacation-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .trip-options{
+    display: flex;
+    width: 100%;
+  }
+  .highlights .options-box{
+    width: 100%;
+  }
+}
