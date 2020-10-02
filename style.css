@@ -14,7 +14,7 @@ body{
 }
 
 header{
-  height: 100px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
@@ -44,11 +44,12 @@ header a{
   list-style: none;
   padding: 10px;
   word-spacing: -4.2px;
+  font-size: 20px;
 }
 
 .navbar-logo{
-  width: 150px;
-  height: auto;
+  width: auto;
+  height: 110px;
 }
 
 .main-content{
@@ -123,14 +124,13 @@ header a{
   border-radius: 5px;
 }
 
-/* /HELP HelP
+/* PREGUNTA /HELP HelP
  p.options-box{
   padding-right: 100px;
 } */ 
 
 .inner{
-  padding: 20px;
-  width: 100%;
+  padding: 1.5em;
 }
 
 .img-highlights{
