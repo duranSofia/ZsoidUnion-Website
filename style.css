@@ -14,7 +14,7 @@ body{
 }
 
 header{
-  height: 100px;
+  height: 8rem;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
@@ -47,7 +47,7 @@ header a{
 }
 
 .navbar-logo{
-  width: 150px;
+  width: 8rem;
   height: auto;
 }
 
@@ -64,14 +64,20 @@ header a{
 }
 
 /* Form first section */
+.form-label{
+  display: inline-block;
+}
+
 .form-control{
+  display: inline-block;
   padding: 10px;
   border-radius: 5px;
   border-style: solid;
 }
 
 .booking-form{
-  display: grid;
+  /* display: grid; */
+  display: inline-block;
   background-color: var(--purple);
   opacity: 0.85;
   border-radius: 5px;
