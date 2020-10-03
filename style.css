@@ -15,7 +15,7 @@ body{
 }
 
 header{
-  height: 9rem;
+  height: 8rem;
   display: flex;
   justify-content: space-between;
   padding: 0.8rem 1rem;
@@ -73,7 +73,13 @@ header a{
   width: 100%;
 }
 
+/* Form first section */
+.form-label{
+  display: inline-block;
+}
+
 .form-control{
+  display: inline-block;
   padding: 10px;
   border-radius: 5px;
   border-style: solid;
@@ -81,7 +87,8 @@ header a{
 }
 
 .booking-form{
-  display: flex;
+  /* display: grid; */
+  display: inline-block;
   background-color: var(--purple);
   opacity: 0.85;
   border-radius: 5px;
