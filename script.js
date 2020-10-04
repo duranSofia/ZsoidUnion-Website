@@ -1,8 +1,16 @@
-// function myFunction() {
-//   var x = document.getElementById("spaceLinks");
-//   if (x.style.display === "block") {
-//     x.style.display = "none";
-//   } else {
-//     x.style.display = "block";
-//   }
-// }
+const navBar = document.querySelector(".navbar")
+const hamburgerIcon = document.querySelector(".hamburger-icon")
+
+hamburgerIcon.addEventListener("click",toggleHamburger);
+
+function toggleHamburger(){
+  navBar.classList.toggle("showNav")
+  hamburgerIcon.classList.toggle("showClose")
+}
+
+const menuLinks = document.querySelectorAll(".menuLink")
+menuLinks.forEach(
+  function(menuLinks){
+    menuLinks.addEventListener("click",toggleHamburger)
+  }
+)
