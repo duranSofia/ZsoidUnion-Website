@@ -3,14 +3,14 @@
   --purple: #333091;
   --lightblue: #82DDF0; 
   --green: #3cd070;
-  --gray: #8e8c8c;
+  --gray: #9a9696;
+  font-size: 14px;
 }
 
 body{
   font-family: 'Space Mono', monospace;
   background-image: url("https://tinyurl.com/yypwu754");
   color: white;
-  font-size: 1.1rem;
 }
 
 header{
@@ -45,7 +45,8 @@ header a{
   list-style: none;
   padding: 10px;
   word-spacing: -4.2px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  padding-right:  40px;
 }
 
 .navbar-logo{
@@ -68,8 +69,10 @@ header a{
 /* ---> FORM Section STARTS<--- */
 
 .form-container{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(5, 50px);
+  grid-gap: 10px;
 }
 
 .form-group{
@@ -79,21 +82,16 @@ header a{
 }
 
 /* Form first section */
-.form-label{
-  display: inline-block;
-}
 
 .form-control{
-  display: inline-block;
   padding: 10px;
   border-radius: 5px;
-  border-style: solid;
-  width: 10rem;
+  width: 150px;
 }
 
 .booking-form{
-  /* display: grid; */
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   background-color: var(--purple);
   opacity: 0.85;
   border-radius: 5px;
@@ -104,17 +102,17 @@ header a{
 }
 
 .form-label{
-  width: 50%;
+  grid-column-start: 1;
+  text-align: left;
 }
 
 .spaceCheck-btn{
   /* BOOKING PAGE SHOW OPTIONS */
-  background-color: var(--green);
+  background-color: var(--gray);
   padding: 10px 20px;
   border-radius: 5px;
-  border-style: 10px solid;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.1em;
   margin-top: 1rem;
 }
 
@@ -126,7 +124,6 @@ header a{
   display: flex;
   flex-wrap: wrap;
 }
-
 .space-img{
   height: auto;
   width: 200px;
@@ -157,7 +154,7 @@ header a{
 
 /* ---> EXPERIENCES Section ENDS<--- */
 
-/* ---> Planerary Highlights page <--- */
+/* ---> Planetary Highlights page <--- */
 
 .highlights{
   display: grid;
@@ -180,8 +177,9 @@ header a{
 
 .img-highlights{
   display: block;
+  overflow: hidden;
   width: 100%;
-  height: 320px;
+  height: 230px;
 }
 
 .btn-cards{
@@ -205,7 +203,7 @@ footer{
 
 .submit-btn{
   /* CONTACT US BUTTON */
-  background-color: var(--green);
+  background-color: var(--gray);
   padding: 10px 20px;
   border-radius: 5px;
   border-style: 10px solid;
@@ -213,45 +211,9 @@ footer{
   font-size: 1rem;
 }
 
-/* Add media queries */
-/* For mobile phones
-@media only screen and (max-width:768px){
-  header{
-    display: flex;
-  }
-  .navbar-menu{
-    display: block;
-    align-items: flex-end;
-  }
-  .main-content{
-    display: block;
-    width: 100%;
-  }
-  .booking-form{
-    display: block;
-    background-color: var(--purple);
-    opacity: 0.85;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 10px;
-    height: auto;
-  }
-  .vacation-container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .trip-options{
-    display: flex;
-    width: 100%;
-  }
-  .highlights .options-box{
-    width: 100%;
-  }
-} */
+/* ---> MEDIA QUERIES BY PAGE AND SECTIONS <--- */
 
 /* MEDIA QUERIES NAVBAR */
-
 @media only screen and (max-width:770px){
   .hamburger-icon{
     display: block;
@@ -323,43 +285,106 @@ footer{
     width: auto;
     height: 5rem;
   }
+/* other HEADER queries */
+  header{
+    display: flex;
+  }
 
-  .highlights{
+  .navbar-menu{
     display: block;
-    padding: 20px 30px;
+    align-items: flex-end;
   }
-  .options-box{
-    height: 650px;
-    background-color: var(--purple);
-    opacity: 0.85;
-    padding: 0 0 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .inner{
-    padding: 10px 20px;
-  }
-  
-  .img-highlights{
-    display: block;
-    width: 100%;
-    height: 350px;
-  }
-  
-  .btn-cards{
-    /* Highlights-page button */
-    display: block;
-    background-color: var(--gray);
-    padding: 10px 10px;
-    border-radius: 5px;
-    font-family: inherit;
-    margin: 1.2rem auto 0 auto;
-    font-size: 1.1rem;
-    width: 120px;
-    cursor: pointer;
-  }
+}
+/* END other HEADER queries */
+
+/* ---> END MEDIA QUERIES NAVBAR */
+
+/* MEDIA QUERIES HIGHLIGHTS-PAGE */
+
+@media only screen and (max-width:770px){
+.highlights-container{
+  display: block; 
+}
+
+.intro-text{
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.highlights{
+  display: block;
+  width: auto;
+  justify-content: center;
+  margin-right: 0;
+}
+
+.options-box{
+  height: auto;
+  font-size: 1.2rem;
+  background-color: var(--purple);
+  opacity: 0.85;
+  padding: 0 0 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.inner{
+  padding: 10px 20px;
+}
+
+.inner h3{
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.img-highlights{
+  display: block;
+  width: 100%;
+  height: 350px;
+}
+
+.btn-cards{
+  /* Highlights-page button */
+  display: block;
+  background-color: var(--gray);
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-family: inherit;
+  margin: 1.2rem auto 0 auto;
+  font-size: 1.3rem;
+  width: 120px;
+  cursor: pointer;
+}
 
 }
 
-/* END MEDIA QUERIES NAVBAR */
+/* END MEDIA QUERIES HIGHLIGHTS-PAGE */
+
+/* START --->BOOKING PAGE MEDIA QUERIES */
+
+@media only screen and (max-width:770px){
+  .main-content{
+    display: block;
+    width: 100%;
+  }
+
+  .booking-form{
+    display: block;
+    background-color: var(--purple);
+    opacity: 0.85;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    height: auto;
+  }
+  .vacation-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .trip-options{
+    display: flex;
+    width: 100%;
+  }
+}
