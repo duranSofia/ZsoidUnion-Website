@@ -54,9 +54,86 @@ header a{
   height: 7rem;
 }
 
-.hamburger-icon{
+/* new responsive menu */
+#sidebarMenu{
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+  background-color: var(--purple);
+  position: fixed;
   display: none;
 }
+
+.sidebarMenu-contents {
+  position: relative;
+  padding: 10px 20px;
+}
+
+#sidebarMenu .navbar-menu {
+  flex-wrap: wrap;
+  padding-left: 0;
+  min-width: 161px;
+  flex-direction: column;
+}
+
+.sidebarMenu-contents .navbar-menu li a{
+  padding: 8px 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebarMenu-contents .navbar-menu li:hover{
+ background-color:#5d5d5d;
+}
+
+.sidebarMenu-open{
+  display: block !important;
+}
+
+#toggle-button {
+  background-color: white;
+  cursor: pointer;
+  display: inline-block;
+  height: fit-content;
+  padding: 6px;
+  visibility: hidden;
+  position: absolute;
+  right: 7px;
+  z-index: 2;
+}
+#toggle-button div {
+  width: 40px;
+  height: 5px;
+  background-color:gray;
+  margin: 6px 0px;
+}
+.toggle-button-change .line1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.toggle-button-change .line2 {
+  opacity: 0;
+}
+
+.toggle-button-change .line3  {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+@media only screen and (max-width: 768px) {
+  #toggle-button {
+    visibility: visible;
+  }
+  #toggle-button div {
+    transition: 0.4s;
+  }
+  header .navbar-menu{
+    display: none;
+  }
+}
+/* (SAID CODE) NAV BAR RESPONSIVE */
+
 
 /* ---> HEADER ENDS <--- */
 
@@ -365,18 +442,25 @@ footer{
 
 @media only screen and (max-width:770px){
   .main-content{
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
 
   .booking-form{
-    display: block;
+    display: flex;
     background-color: var(--purple);
     opacity: 0.85;
     border-radius: 5px;
     margin: 5px;
     padding: 10px;
     height: auto;
+  }
+  
+  .form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
   }
   .vacation-container{
     display: flex;
@@ -385,6 +469,8 @@ footer{
   }
   .trip-options{
     display: flex;
+    flex-direction: column;
+    align-content: center;
     width: 100%;
   }
 }
