@@ -1,7 +1,6 @@
 :root{
   --darkPurple: #231942;
   --purple: #333091;
-  --lightblue: #82DDF0; 
   --green: #3cd070;
   --gray: #9a9696;
   font-size: 14px;
@@ -141,30 +140,10 @@ header a{
 .main-content{
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  height: auto;
+  margin: 1.5rem;
 }
 /* ---> FORM Section STARTS<--- */
-
-.form-container{
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  grid-template-rows: repeat(5, 50px);
-  grid-gap: 10px;
-}
-
-.form-group{
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-/* Form first section */
-
-.form-control{
-  padding: 10px;
-  border-radius: 5px;
-  width: 150px;
-}
 
 .booking-form{
   display: flex;
@@ -172,61 +151,75 @@ header a{
   background-color: var(--purple);
   opacity: 0.85;
   border-radius: 5px;
-  margin: 0.5rem;
   width: 100%;
-  height: 300px;
+  height: auto;
   padding: 1.2rem;
 }
 
+.form-container{
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: 10px;
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.form-control{
+  padding: 10px;
+  border-radius: 5px;
+  width: auto;
+  font-size: 1.1rem;
+}
+
 .form-label{
-  grid-column-start: 1;
   text-align: left;
 }
 
+.form-label-options{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
 .spaceCheck-btn{
-  /* BOOKING PAGE SHOW OPTIONS */
-  background-color: var(--gray);
+  background-color: var(--green);
   padding: 10px 20px;
   border-radius: 5px;
   font-family: inherit;
-  font-size: 1.1em;
+  font-size: 1em;
   margin-top: 1rem;
 }
 
 /* ---> FORM Section ENDS<--- */
 
-/* ---> EXPERIENCES Section STARTS<--- */
+/* ---> BOOK YOUR VACATION Section STARTS<--- */
 
 .vacation-container{
-  display: flex;
-  flex-wrap: wrap;
-}
-.space-img{
-  height: auto;
-  width: 200px;
-  border-radius: 5px; 
-}
-.book-btn{
-/* BOOKING PAGE BTN */
-  display: block;
-  background-color: var(--gray);
-  padding: 10px 20px;
-  border-radius: 5px;
-  border-style: 2px solid;
-  font-family: inherit;
-  margin-top: 1.2rem;
-  font-size: 1.1rem;
-  width: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  margin: 15px 0;
+  grid-gap: 10px;
 }
 
 .trip-options{
-  background-color: var(--purple);
+  background-color: var(--darkPurple);
   opacity: 0.85;
   border-radius: 5px;
-  margin: 5px;
   padding: 15px;
-  width: 30%;
   height: auto;
+}
+
+.space-img{
+  display: block;
+  height: 450px;
+  width: 100%;
+  border-radius: 5px; 
+  overflow: hidden;
+}
+
+.inner-book{
+  padding: 0;
+  border: 2px solid white;
+  text-align: center;
 }
 
 /* ---> EXPERIENCES Section ENDS<--- */
@@ -358,10 +351,6 @@ footer{
      border-bottom: 2px solid white;
    }
 
-   .navbar-logo{
-    width: auto;
-    height: 5rem;
-  }
 /* other HEADER queries */
   header{
     display: flex;
@@ -442,9 +431,9 @@ footer{
 
 @media only screen and (max-width:770px){
   .main-content{
-    display: flex;
-    flex-direction: column;
+    display: block;
     width: 100%;
+    height: auto;
   }
 
   .booking-form{
@@ -460,8 +449,11 @@ footer{
   .form-container{
     display: flex;
     flex-direction: column;
+    align-content: flex-start;
     padding: 10px;
   }
+
+  /* second part booking page */
   .vacation-container{
     display: flex;
     flex-direction: column;
@@ -470,7 +462,7 @@ footer{
   .trip-options{
     display: flex;
     flex-direction: column;
-    align-content: center;
-    width: 100%;
+    justify-content: center;
+    width: 90%;
   }
 }
