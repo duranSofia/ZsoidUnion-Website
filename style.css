@@ -1,16 +1,15 @@
 :root{
   --darkPurple: #231942;
   --purple: #333091;
-  --lightblue: #82DDF0; 
   --green: #3cd070;
-  --gray: #8e8c8c;
+  --gray: #9a9696;
+  font-size: 14px;
 }
 
 body{
   font-family: 'Space Mono', monospace;
   background-image: url("https://tinyurl.com/yypwu754");
   color: white;
-  font-size: 1.1rem;
 }
 
 header{
@@ -45,7 +44,8 @@ header a{
   list-style: none;
   padding: 10px;
   word-spacing: -4.2px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  padding-right:  40px;
 }
 
 .navbar-logo{
@@ -53,9 +53,86 @@ header a{
   height: 7rem;
 }
 
-.hamburger-icon{
+/* new responsive menu */
+#sidebarMenu{
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+  background-color: var(--purple);
+  position: fixed;
   display: none;
 }
+
+.sidebarMenu-contents {
+  position: relative;
+  padding: 10px 20px;
+}
+
+#sidebarMenu .navbar-menu {
+  flex-wrap: wrap;
+  padding-left: 0;
+  min-width: 161px;
+  flex-direction: column;
+}
+
+.sidebarMenu-contents .navbar-menu li a{
+  padding: 8px 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebarMenu-contents .navbar-menu li:hover{
+ background-color:#5d5d5d;
+}
+
+.sidebarMenu-open{
+  display: block !important;
+}
+
+#toggle-button {
+  background-color: white;
+  cursor: pointer;
+  display: inline-block;
+  height: fit-content;
+  padding: 6px;
+  visibility: hidden;
+  position: absolute;
+  right: 7px;
+  z-index: 2;
+}
+#toggle-button div {
+  width: 40px;
+  height: 5px;
+  background-color:gray;
+  margin: 6px 0px;
+}
+.toggle-button-change .line1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.toggle-button-change .line2 {
+  opacity: 0;
+}
+
+.toggle-button-change .line3  {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+@media only screen and (max-width: 768px) {
+  #toggle-button {
+    visibility: visible;
+  }
+  #toggle-button div {
+    transition: 0.4s;
+  }
+  header .navbar-menu{
+    display: none;
+  }
+}
+/* (SAID CODE) NAV BAR RESPONSIVE */
+
 
 /* ---> HEADER ENDS <--- */
 
@@ -63,101 +140,91 @@ header a{
 .main-content{
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  height: auto;
+  margin: 1.5rem;
 }
 /* ---> FORM Section STARTS<--- */
 
-.form-container{
+.booking-form{
   display: flex;
   flex-wrap: wrap;
-}
-
-.form-group{
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-/* Form first section */
-.form-label{
-  display: inline-block;
-}
-
-.form-control{
-  display: inline-block;
-  padding: 10px;
-  border-radius: 5px;
-  border-style: solid;
-  width: 10rem;
-}
-
-.booking-form{
-  /* display: grid; */
-  display: inline-block;
   background-color: var(--purple);
   opacity: 0.85;
   border-radius: 5px;
-  margin: 0.5rem;
   width: 100%;
-  height: 300px;
+  height: auto;
   padding: 1.2rem;
 }
 
+.form-container{
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: 10px;
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.form-control{
+  padding: 10px;
+  border-radius: 5px;
+  width: auto;
+  font-size: 1.1rem;
+}
+
 .form-label{
-  width: 50%;
+  text-align: left;
+}
+
+.form-label-options{
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .spaceCheck-btn{
-  /* BOOKING PAGE SHOW OPTIONS */
   background-color: var(--green);
   padding: 10px 20px;
   border-radius: 5px;
-  border-style: 10px solid;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1em;
   margin-top: 1rem;
 }
 
 /* ---> FORM Section ENDS<--- */
 
-/* ---> EXPERIENCES Section STARTS<--- */
+/* ---> BOOK YOUR VACATION Section STARTS<--- */
 
 .vacation-container{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.space-img{
-  height: auto;
-  width: 200px;
-  border-radius: 5px; 
-}
-.book-btn{
-/* BOOKING PAGE BTN */
-  display: block;
-  background-color: var(--gray);
-  padding: 10px 20px;
-  border-radius: 5px;
-  border-style: 2px solid;
-  font-family: inherit;
-  margin-top: 1.2rem;
-  font-size: 1.1rem;
-  width: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  margin: 15px 0;
+  grid-gap: 10px;
 }
 
 .trip-options{
-  background-color: var(--purple);
+  background-color: var(--darkPurple);
   opacity: 0.85;
   border-radius: 5px;
-  margin: 5px;
   padding: 15px;
-  width: 30%;
   height: auto;
+}
+
+.space-img{
+  display: block;
+  height: 450px;
+  width: 100%;
+  border-radius: 5px; 
+  overflow: hidden;
+}
+
+.inner-book{
+  padding: 0;
+  border: 2px solid white;
+  text-align: center;
 }
 
 /* ---> EXPERIENCES Section ENDS<--- */
 
-/* ---> Planerary Highlights page <--- */
+/* ---> Planetary Highlights page <--- */
 
 .highlights{
   display: grid;
@@ -180,8 +247,9 @@ header a{
 
 .img-highlights{
   display: block;
+  overflow: hidden;
   width: 100%;
-  height: 320px;
+  height: 230px;
 }
 
 .btn-cards{
@@ -205,7 +273,7 @@ footer{
 
 .submit-btn{
   /* CONTACT US BUTTON */
-  background-color: var(--green);
+  background-color: var(--gray);
   padding: 10px 20px;
   border-radius: 5px;
   border-style: 10px solid;
@@ -213,45 +281,9 @@ footer{
   font-size: 1rem;
 }
 
-/* Add media queries */
-/* For mobile phones
-@media only screen and (max-width:768px){
-  header{
-    display: flex;
-  }
-  .navbar-menu{
-    display: block;
-    align-items: flex-end;
-  }
-  .main-content{
-    display: block;
-    width: 100%;
-  }
-  .booking-form{
-    display: block;
-    background-color: var(--purple);
-    opacity: 0.85;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 10px;
-    height: auto;
-  }
-  .vacation-container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .trip-options{
-    display: flex;
-    width: 100%;
-  }
-  .highlights .options-box{
-    width: 100%;
-  }
-} */
+/* ---> MEDIA QUERIES BY PAGE AND SECTIONS <--- */
 
 /* MEDIA QUERIES NAVBAR */
-
 @media only screen and (max-width:770px){
   .hamburger-icon{
     display: block;
@@ -278,9 +310,9 @@ footer{
     top: 8px;
     right: 0;
     background-color: #231942;
-    opacity: 0.9;
     width: 100%;
     height: 480px;
+    opacity: 0.9;
     overflow: hidden;
     transform: translateY(-100%);
   }
@@ -311,7 +343,7 @@ footer{
     padding-bottom: 3px;
     border-bottom: 1px solid white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   
   .navbar ul li a:hover,
@@ -319,47 +351,118 @@ footer{
      border-bottom: 2px solid white;
    }
 
-   .navbar-logo{
-    width: auto;
-    height: 5rem;
+/* other HEADER queries */
+  header{
+    display: flex;
   }
 
-  .highlights{
+  .navbar-menu{
     display: block;
-    padding: 20px 30px;
+    align-items: flex-end;
   }
-  .options-box{
-    height: 650px;
-    background-color: var(--purple);
-    opacity: 0.85;
-    padding: 0 0 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .inner{
-    padding: 10px 20px;
-  }
-  
-  .img-highlights{
-    display: block;
-    width: 100%;
-    height: 350px;
-  }
-  
-  .btn-cards{
-    /* Highlights-page button */
-    display: block;
-    background-color: var(--gray);
-    padding: 10px 10px;
-    border-radius: 5px;
-    font-family: inherit;
-    margin: 1.2rem auto 0 auto;
-    font-size: 1.1rem;
-    width: 120px;
-    cursor: pointer;
-  }
+}
+/* END other HEADER queries */
+
+/* ---> END MEDIA QUERIES NAVBAR */
+
+/* MEDIA QUERIES HIGHLIGHTS-PAGE */
+
+@media only screen and (max-width:770px){
+.highlights-container{
+  display: block; 
+}
+
+.intro-text{
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.highlights{
+  display: block;
+  width: auto;
+  justify-content: center;
+  margin-right: 0;
+}
+
+.options-box{
+  height: auto;
+  font-size: 1.2rem;
+  background-color: var(--purple);
+  opacity: 0.85;
+  padding: 0 0 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.inner{
+  padding: 10px 20px;
+}
+
+.inner h3{
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.img-highlights{
+  display: block;
+  width: 100%;
+  height: 350px;
+}
+
+.btn-cards{
+  /* Highlights-page button */
+  display: block;
+  background-color: var(--gray);
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-family: inherit;
+  margin: 1.2rem auto 0 auto;
+  font-size: 1.3rem;
+  width: 120px;
+  cursor: pointer;
+}
 
 }
 
-/* END MEDIA QUERIES NAVBAR */
+/* END MEDIA QUERIES HIGHLIGHTS-PAGE */
+
+/* START --->BOOKING PAGE MEDIA QUERIES */
+
+@media only screen and (max-width:770px){
+  .main-content{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .booking-form{
+    display: flex;
+    background-color: var(--purple);
+    opacity: 0.85;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    height: auto;
+  }
+  
+  .form-container{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding: 10px;
+  }
+
+  /* second part booking page */
+  .vacation-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .trip-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+}
