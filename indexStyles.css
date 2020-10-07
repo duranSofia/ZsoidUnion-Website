@@ -1,0 +1,282 @@
+/*
+Basic Styles
+*/
+
+:root{
+  --darkPurple: #231942;
+  --purple: #333091;
+  --lightblue: #82DDF0;
+  --green: #3cd070;
+  --yellow: #F8C630;
+}
+
+h2,h3,h1{
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+body {
+    min-width: 320px;
+    background-image: url("https://tinyurl.com/yypwu754");
+    font-family: 'Space Mono', monospace ;
+    margin: 20px;
+}
+section {
+    padding: 52px 0;
+}
+section h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 64px;
+    
+}
+.details{
+  clear: both;
+}
+/*
+Navigation
+*/
+
+
+nav{
+  float: right;
+  justify-content: space-between;
+  color: white;
+  display: flex;
+}
+
+.navbar-menu{
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+ul{
+  display: flex;
+}
+
+ul li{ 
+  columns: white;
+  list-style: none;
+  padding: 10px;
+  float: right;
+}
+
+.navbar-logo{
+  width: 85px;
+  height: auto;
+}
+  h3{
+      min-height: 30px;
+      text-transform: none;
+      text-align: center;
+      color: white;
+
+  }
+
+  .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 35%;
+    }
+  h1{
+    color: white;
+    min-height: 30px;
+    text-transform: none;
+    text-align: center;
+    color: white;
+
+  }
+
+  .row p {
+    color: white;
+
+  }
+
+  .block {
+ cursor: pointer;
+  background-color:var(--lightblue);
+  font-size: 16px;
+  height: 50px;
+  justify-content: center;
+
+  
+}
+#sidebarMenu{
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+  background-color: var(--purple);
+  position: fixed;
+  display: none;
+}
+
+.sidebarMenu-contents {
+  position: relative;
+  padding: 10px 20px;
+}
+
+#sidebarMenu .navbar-menu {
+  flex-wrap: wrap;
+  padding-left: 0;
+  min-width: 161px;
+  flex-direction: column;
+}
+
+.sidebarMenu-contents .navbar-menu li a{
+  padding: 8px 10px;
+}
+
+.sidebarMenu-contents .navbar-menu li:hover{
+ background-color:#5d5d5d;
+}
+
+.sidebarMenu-open{
+  display: block !important;
+}
+
+#toggle-button {
+  background-color: white;
+  cursor: pointer;
+  display: inline-block;
+  height: fit-content;
+  padding: 6px;
+  visibility: hidden;
+  position: absolute;
+  right: 7px;
+  z-index: 2;
+}
+#toggle-button div {
+  width: 40px;
+  height: 5px;
+  background-color:gray;
+  margin: 6px 0px;
+}
+.toggle-button-change .line1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.toggle-button-change .line2 {
+  opacity: 0;
+}
+
+.toggle-button-change .line3  {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+@media only screen and (max-width: 900px) {
+  #toggle-button {
+    visibility: visible;
+  }
+  #toggle-button div {
+    transition: 0.4s;
+  }
+  header .navbar-menu{
+    display: none;
+  }
+}
+
+
+/*
+Contact us html styles.
+*/
+
+.contactForm{
+  padding: 0px 25px;
+  margin: auto;
+}
+.formInput{
+  background-color: #333091;
+  color: #565656;
+  padding: 11px 12px;
+  width: 98%;
+  border: 1px solid #949494;
+}
+textarea{
+  overflow: auto;
+  resize: vertical;
+  height: 153px;
+}
+.formButton{
+  text-align: right;
+}
+
+.button{
+  background-color: #149dcc;
+  border: 1px solid #149dcc;
+  color: #ffffff;
+  padding: 15px 37px;
+  cursor: pointer;
+}
+label{
+  color: white;
+}
+
+.title {
+  color: white;
+  margin-left: 30px;
+}
+
+
+.paragraph {
+  text-align: center;
+  color: white;
+  margin: 50px;
+  font-size: x-large;
+}
+
+iframe {
+   width: 100%;
+ }
+
+ /* colums 
+ */
+.column{
+  display: flex;
+
+}
+.col {
+  width: 400px;
+  height: 400px;
+  margin: 5px;
+  flex: 1;
+}
+
+.column  h2, p{
+  color: white;
+}
+
+
+ /*
+ Footer
+ */
+ .main-footer {
+	background:burlywood;
+  padding-top:30px;
+  height: 150px;
+
+}
+
+.main-footer .copyright {
+	float: left;
+  margin-top:13px;
+  color:black;
+}
+
+.main-footer .social-links {
+    margin-left:50px;
+    width: 50px;
+    margin-right: 200px;
+    float: right;
+	
+}
+.social-icon {
+  width: 50px;
+  height: 50px;
+}
