@@ -92,7 +92,7 @@ header a{
 }
 
 .bloc:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .bloc2 {
@@ -111,7 +111,7 @@ header a{
 }
 
 .bloc2:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .bloc3 {
@@ -130,7 +130,7 @@ header a{
 }
 
 .bloc3:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 /* --- Intro section ---*/
