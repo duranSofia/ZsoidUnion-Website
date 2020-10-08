@@ -315,20 +315,55 @@ header a{
 }
 
 /* FOOTER */
+/* ---> SAID FOOTER STYLES <--- */
 
-footer{
-  padding: 15px;
+.main-footer {
+	background:burlywood;
+  padding-top:30px;
+  height: 150px;
+
 }
 
-.submit-btn{
+.main-footer .copyright {
+	float: left;
+  margin-top:13px;
+  color:black;
+}
+
+.main-footer .social-links {
+  margin-left:50px;
+  width: 50px;
+  margin-right: 200px;
+  float: right;
+	
+}
+.social-icon {
+  width: 50px;
+  height: 50px;
+}
+
+ul{
+  display: flex;
+}
+
+ul li{ 
+  columns: white;
+  list-style: none;
+  padding: 10px;
+  float: right;
+}
+/* .submit-btn{ */
   /* CONTACT US BUTTON */
-  background-color: var(--gray);
+  /* background-color: var(--gray);
   padding: 10px 20px;
   border-radius: 5px;
   border-style: 10px solid;
   font-family: inherit;
   font-size: 1rem;
-}
+} */
+
+/* ---> SAID FOOTER STYLES <--- */
+
 
 /* ---> MEDIA QUERIES BY PAGE AND SECTIONS <--- */
 
