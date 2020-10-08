@@ -196,41 +196,66 @@ header a{
 
 .vacation-container{
   display: grid;
-  grid-template-columns: repeat(3, 33%);
-  margin: 15px 0;
-  grid-gap: 10px;
+  width: 100%;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 15px;
+  padding: 10px;
+  margin: 0 10px;
+  box-sizing: border-box;
 }
 
 .trip-options{
+  display: grid;
+  grid-template-columns: auto 4fr 0.5fr;
+  grid-gap: 10px;
   background-color: var(--darkPurple);
   opacity: 0.85;
   border-radius: 5px;
-  padding: 15px;
+  padding: 10px;
   height: auto;
 }
 
-.space-img{
-  display: block;
-  height: 450px;
-  width: 100%;
+.img-book{
+  display: inline-block;
+  height: auto;
+  width: 250px;
   border-radius: 5px; 
   overflow: hidden;
 }
 
 .inner-book{
-  padding: 0;
-  border: 2px solid white;
-  text-align: center;
+  display: inline-block;  
+  padding: 10px 20px 10px 10px;
+  border: 1px solid white;
+  text-align: left;
+  font-size: 1.05rem;
 }
 
-/* ---> EXPERIENCES Section ENDS<--- */
+.btn-col{
+  margin: auto 5px;
+}
+.btn-book{
+  /* Highlights-page button */
+  display: block;
+  background-color: var(--gray);
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-family: inherit;
+  margin: 5px auto 0 auto;
+  font-size: 1em;
+  width: 100px;
+  cursor: pointer;
+}
+
+
+/* ---> BOOK PAGE Section ENDS<--- */
 
 /* ---> Planetary Highlights page <--- */
 
 .intro-text{
   display: block;
   width: 95%;
-  height: 140px;
+  height: auto;
   text-align: center;
   font-size: 1.2rem;
   margin: 5px 30px;
@@ -247,7 +272,7 @@ header a{
   box-sizing: border-box;
 }
 .options-box{
-  font-size: 1.2rem;
+  font-size: 1em;
   line-height: 1.6em;
   height: 650px;
   background-color: var(--purple);
@@ -261,6 +286,8 @@ header a{
 }
 
 .img-highlights{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   display: block;
   overflow: hidden;
   width: 100%;
