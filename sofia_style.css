@@ -147,28 +147,37 @@ header a{
 /* ---> FORM Section STARTS<--- */
 
 .booking-form{
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   background-color: var(--purple);
   opacity: 0.85;
   border-radius: 5px;
-  width: 100%;
+  width: 98%;
   height: auto;
-  padding: 1.2rem;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 5px 10px;
 }
 
 .form-container{
-  display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  grid-gap: 10px;
   width: 100%;
   font-size: 1.25rem;
 }
 
+.form-group-top{
+  display: block;
+  padding: 5px 10px;
+}
+
+.form-group{
+  display: inline-block;
+  padding: 10px 20px;
+}
+
 .form-control{
+  display: inline-block;
   padding: 10px;
   border-radius: 5px;
-  width: auto;
+  width: fit-content;
   font-size: 1.1rem;
 }
 
@@ -176,18 +185,18 @@ header a{
   text-align: left;
 }
 
-.form-label-options{
-  grid-column-start: 1;
-  grid-column-end: 3;
+.form-btn{
+  margin-right: 40%;
+  margin-left: 40%;
 }
-
 .spaceCheck-btn{
   background-color: var(--green);
   padding: 10px 20px;
   border-radius: 5px;
   font-family: inherit;
-  font-size: 1em;
-  margin-top: 1rem;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  align-self: center;
 }
 
 /* ---> FORM Section ENDS<--- */
@@ -200,7 +209,6 @@ header a{
   grid-template-rows: repeat(3, auto);
   grid-gap: 15px;
   padding: 10px;
-  margin: 0 10px;
   box-sizing: border-box;
 }
 
@@ -216,10 +224,11 @@ header a{
 }
 
 .img-book{
-  display: inline-block;
+  display: flex;
+  align-self: center;
   height: auto;
   width: 250px;
-  border-radius: 5px; 
+  border-radius: 3px;
   overflow: hidden;
 }
 
@@ -235,14 +244,12 @@ header a{
   margin: auto 5px;
 }
 .btn-book{
-  /* Highlights-page button */
   display: block;
   background-color: var(--gray);
   padding: 10px 10px;
   border-radius: 5px;
   font-family: inherit;
-  margin: 5px auto 0 auto;
-  font-size: 1em;
+  font-size: 1.1rem;
   width: 100px;
   cursor: pointer;
 }
