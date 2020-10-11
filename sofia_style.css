@@ -287,7 +287,8 @@ header a{
 }
 .options-box{
   font-size: 1em;
-  line-height: 1.6em;
+  line-height: 1.4em;
+  overflow: scroll;
   height: 500px;
   background-color: var(--purple);
   opacity: 0.85;
@@ -298,6 +299,10 @@ header a{
 .inner{
   padding: 10px 20px;
 }
+
+/* .inner p{
+  font-size: 0.5em;
+} */
 
 .img-highlights{
   border-top-left-radius: 5px;
@@ -510,8 +515,7 @@ ul li{
   border-radius: 5px;
   font-family: inherit;
   margin: 1.2rem auto 0 auto;
-  font-size: 1.3rem;
-  width: 120px;
+  width: auto;
   cursor: pointer;
 }
 
