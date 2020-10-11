@@ -288,7 +288,7 @@ header a{
 .options-box{
   font-size: 1em;
   line-height: 1.6em;
-  height: 650px;
+  height: 500px;
   background-color: var(--purple);
   opacity: 0.85;
   padding: 0 0 10px;
@@ -311,7 +311,7 @@ header a{
 .btn-cards{
   /* Highlights-page button */
   display: block;
-  background-color: var(--gray);
+  background-color: var(--green);
   padding: 10px 20px;
   border-radius: 5px;
   font-family: inherit;
