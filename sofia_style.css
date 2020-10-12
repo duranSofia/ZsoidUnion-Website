@@ -288,7 +288,7 @@ header a{
 .options-box{
   font-size: 1em;
   line-height: 1.4em;
-  overflow: scroll;
+  overflow: hidden;
   height: 500px;
   background-color: var(--purple);
   opacity: 0.85;
