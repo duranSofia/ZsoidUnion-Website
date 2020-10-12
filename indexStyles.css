@@ -1,17 +1,16 @@
 /*
-Basic Styles
-*/
-
+/* Basic Styles */
 :root{
   --darkPurple: #231942;
   --purple: #333091;
   --lightblue: #82DDF0;
   --green: #3cd070;
   --yellow: #F8C630;
+  font-size: 14px;
 }
 
 h2,h3,h1{
-    font-family: Helvetica,Arial,sans-serif;
+    font-family: 'Space Mono', monospace,Helvetica,sans-serif;
 }
 
 body {
