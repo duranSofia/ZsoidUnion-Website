@@ -154,6 +154,7 @@ header a{
   display: block;
   padding: 15px 10px;
   border-bottom: 1px solid #3cd070;
+  margin-bottom: 10px;
 }
 
 .form-group{
@@ -163,9 +164,9 @@ header a{
 
 .form-control{
   display: inline-block;
-  padding: 10px;
+  padding: 8px;
   border-radius: 5px;
-  width: fit-content;
+  width: fit-content; 
   font-size: 1.1rem;
 }
 
@@ -185,6 +186,10 @@ header a{
   font-size: 1.1rem;
   margin-top: 10px;
   align-self: center;
+}
+
+.spaceCheck-btn:hover{
+  transform: scale(1.02);
 }
 
 /* ---> FORM Section ENDS<--- */
@@ -209,6 +214,11 @@ header a{
   border-radius: 5px;
   padding: 10px;
   height: auto;
+}
+
+.trip-options:hover{
+  transform: scale(1.02);
+  background-color: var(--purple);
 }
 
 .img-book{
@@ -274,6 +284,10 @@ header a{
   border-radius: 5px;
 }
 
+.options-box:hover {
+  transform: scale(1.02);
+}
+
 .inner{
   padding: 10px 20px;
 }
@@ -303,6 +317,11 @@ header a{
   width: fit-content;
   cursor: pointer;
 }
+
+.btn-cards:hover {
+  transform: scale(1.02);
+}
+
 
 /* FOOTER */
 /* ---> SAID FOOTER STYLES <--- */
@@ -435,7 +454,9 @@ ul li{
     display: block;
     align-items: flex-end;
   }
-  
+}
+
+@media only screen and (max-width: 800px) {
   #toggle-button {
     visibility: visible;
   }
@@ -446,7 +467,6 @@ ul li{
     display: none;
   }
 }
-
 /* END other HEADER queries */
 
 /* ---> END MEDIA QUERIES NAVBAR */

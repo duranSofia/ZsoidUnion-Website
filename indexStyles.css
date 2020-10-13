@@ -25,7 +25,7 @@ section h2 {
     text-align: center;
     text-transform: uppercase;
     font-size: 64px;
-    
+    margin-top: 20px;  
 }
 .details{
   clear: both;
@@ -36,6 +36,7 @@ Navigation
 
 
 nav{
+  margin-top: 20px;
   float: right;
   justify-content: space-between;
   color: white;
@@ -59,14 +60,16 @@ ul{
 ul li{ 
   columns: white;
   list-style: none;
-  padding: 10px;
+  padding-right:  40px;
   float: right;
+  font-size: 1.2rem;
 }
 
 .navbar-logo{
   width: 85px;
   height: auto;
 }
+
   h3{
       min-height: 30px;
       text-transform: none;
@@ -75,12 +78,18 @@ ul li{
 
   }
 
-  .center {
+  .center {   
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 35%;
-    }
+      width: 28%;
+      height: auto;
+  }
+
+  .center:hover{
+    transform: scale(1.02);
+  }
+
   h1{
     color: white;
     min-height: 30px;
@@ -92,7 +101,7 @@ ul li{
 
   .row p {
     color: white;
-
+    padding: 0 10px;
   }
 
   .block {
@@ -102,6 +111,7 @@ ul li{
   height: 50px;
   justify-content: center;
   font-family: inherit;
+  margin-left: 10px;
 }
 #sidebarMenu{
   right: 0;
